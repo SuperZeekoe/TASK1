@@ -19,7 +19,9 @@ body {
     font-size: 0.9rem;
     /* overflow: hidden; */
     overflow-x: hidden;
+    overflow-y:hidden;
     font-family: Quicksand;
+    letter-spacing: 0.1rem;
 }
 
 
@@ -28,7 +30,7 @@ body {
     position: relative;
     align-items: center;
     padding: 0 4rem;
-    height: 4.7rem;
+    height: 4.3rem;
     background-color: white;
     color: rgb(39, 39, 39)
 }
@@ -40,18 +42,23 @@ body {
 nav {
     display: flex;
     grid-gap: 3rem;
-    gap: 3rem;
+    gap: 1rem;
 }
 
 nav a {
     text-decoration: none;
-    color: rgb(39, 39, 39)
+    color: rgb(39, 39, 39);
+    transition: 0.5s ease;
+    font-size: 0.8rem;
 }
+
+
 
 .navMiddle {
     width: 20%;
     display: flex;
     justify-content: center;
+    font-size: 0.6rem;
 }
 
 .navRight {
@@ -70,6 +77,36 @@ nav a {
     border-radius: 15px;
 }
 
+.navLeft .dropdownContent {
+    display: none;
+    position: absolute;
+    left:0;
+    height: 35%;
+    width: 100%;
+    background-color: rgba(255,255,255,1);
+    z-index: 1;
+}
+
+.techbtn {
+    float: left;
+    overflow: hidden;
+}
+
+.techbtn:hover .dropdownContent {
+    display: block;
+}
+
+/* dropdown test */
+.cover{
+	display: flex;
+    flex-direction:column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.cover a {
+margin: 25px;
+}
 
 main {
     display: flex;
@@ -85,6 +122,7 @@ main {
     position: relative;
     width: 24%;
     z-index: 30;
+    margin-top: -7%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -95,9 +133,16 @@ main {
 }
 
 button {
-    width: 20%;
+    width: 27%;
+    /* height: 2rem; */
     border: rgba(39, 39, 39,0) 1px solid;
-    border-radius: 15px;
+    color: rgb(250,250,250);
+    background-color: rgba(158, 158, 158, 0.3);
+    border-radius: 25px;
+    font-size: 1rem;
+    padding: 7px;
+    letter-spacing: 0.1rem;
+    cursor: pointer;
 }
 
 /* Video source: https://pixabay.com/nl/videos/natuur-golven-oceaan-zee-steen-31377/ */
